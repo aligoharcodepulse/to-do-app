@@ -1,0 +1,171 @@
+*{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: aqua;
+}
+.list{
+    width: 100%;
+    max-width: 540px;
+    background:white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 15px;
+}
+
+.list h2{
+    color:#4e085f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    background: #edeef0;
+}
+
+input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 15px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: brown;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    color: whitesmoke;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: brown;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    color: whitesmoke;
+    display: block;
+    margin: auto;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+ul li::before{
+    width: 28px;
+    height: 28px;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+.edit-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 50px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+@media only screen and (max-width: 768px) {
+    .list{
+        padding: 30px;
+    }
+    ul li{
+        font-size: 15px;
+    }
+    .row{
+        padding-left: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .list{
+        padding: 12px;
+    }
+    ul li{
+        font-size: 10px;
+    }
+    .row{
+        padding-left: 90px;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin-left: 0px;
+    }
+}
